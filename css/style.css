@@ -1,0 +1,489 @@
+body {
+    width: auto;
+}
+
+html {
+    scroll-behavior: smooth; /* amortigua el enlace-seccion */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #f8f8f8; /* Color de fondo */
+    padding: 20px; /* Relleno en los 4 lados top, right, bottom, left */
+    text-align: center; /* Alineación de texto al centro */
+}
+
+.logo img {
+    max-width: 100px;
+    /* Ajusta el tamaño del logo según tus necesidades */
+    float: left;
+    /* overflow: hidden; */
+}
+
+h1 {
+    /* font-family: 'Font Awesome', sans-serif; */
+    /* content: "\f007"; */
+    /* Código Unicode del ícono (en este caso, el ícono de usuario) */
+    font-size: 56px;
+    color: #53D98F;
+    margin: 10px 0;
+}
+
+.masc {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    /* font-weight: bold; */
+    /* color: red; */
+}
+
+/* Nuevo navegador */
+/* Estilo para la clase "navegacion" */
+.navegacion {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+}
+
+/* Estilo para los botones */
+.navegacion .link1 {
+    flex: 1;
+    /* Distribuye el ancho de los botones de manera uniforme */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    padding: 10px;
+    /* Espacio interno para mayor legibilidad */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    background-color: #fbe046;
+    /* Color de fondo de los botones */
+    border: 1px solid #ccc;
+    /* Borde para mayor contraste */
+    border-radius: 6ch;
+    /* Bordes redondeados */
+    margin: 0 5px;
+    /* Espacio entre los botones */
+    color: #070707;
+    /* Color del texto */
+}
+
+/* Estilo para el hover (opcional) */
+.navegacion .link1:hover {
+    background-color: #a79707;
+    /* Cambio de color al pasar el cursor */
+}
+
+/* Fin #f3a01c navegador nuevo #a79707*/
+
+
+.main {
+    background-color: #feedcd;
+    margin-top: 15px;
+    border: 1.6px solid rgb(80, 109, 243);
+    box-shadow: 5px 15px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Imagen de Leon */
+.contenedor {
+    /* Esta clase se aplica al contenedor principal que envuelve todo el contenido. Define un ancho del 100% y centra los elementos horizontalmente y verticalmente. */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contenedor figure {
+    /*  Aquí estamos definiendo estilos para la figura que contiene la imagen. Establece una altura de 250px, un ancho de 350px y un sombreado para darle un efecto de elevación. Además, se utiliza overflow: hidden para recortar cualquier parte de la imagen que se desborde. */
+    position: relative;
+    height: 450px; /* 250px */
+    cursor: pointer;
+    width: 750px; /* 350px */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+}
+
+.contenedor figure img {
+    /* Estos estilos se aplican a la imagen dentro de la figura. La imagen ocupa todo el espacio disponible y tiene una transición suave de 400 ms cuando se produce un cambio (por ejemplo, al pasar el ratón por encima). */
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+    will-change: transform;
+}
+
+.contenedor figure .capa { /* Aquí definimos los estilos para la capa de superposición que aparece al pasar el ratón por encima de la imagen. La capa tiene un fondo semitransparente (rgba(0,103,123,0.7)) y una transición de 400 ms para suavizar la aparición. */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 103, 123, 0.7);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover>.capa { /* Cuando el usuario pasa el ratón por encima de la figura, la capa de superposición se vuelve visible y opaca. */
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor figure:hover>.capa h3 { /* Al pasar el ratón por encima, el título dentro de la capa se desplaza hacia arriba (margen superior de 70px) y se vuelve más visible. */
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.contenedor figure:hover>img { /* La imagen se agranda un 30% (escala 1.3) al pasar el ratón por encima. */
+    transform: scale(1.3);
+}
+
+.contenedor figure .capa h3 { /*  Estilos para el título dentro de la capa de superposición. El color del texto es blanco (#fff), y hay una transición de 400 ms para suavizar los cambios. */
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+    margin-top: 30px;
+}
+
+.contenedor figure .capa p { /* Estilos para el párrafo dentro de la capa de superposición. El texto es blanco, tiene un tamaño de fuente de 15px y un espaciado de línea de 1.5. */
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+/* Fin imagen Leon */
+
+/* Estilo para párrafos */
+
+
+.bienv {
+    margin: 20px 20px 20px 20px;
+}
+
+/* PIE DE PAGINA */
+/* Estilo para el footer */
+footer {
+    margin-top: 35px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para la clase "field" */
+.field {
+    display: flex;
+    justify-content: space-between;
+    /* ajusta las columnas */
+}
+
+/* Estilo para los íconos de redes sociales */
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+/* Estilo para los íconos individuales */
+.redes-sociales a {
+    margin-left: 10px;
+    /* Espacio entre los íconos */
+    color: #333;
+    /* Color de los íconos */
+}
+
+.col ul {
+    list-style: none;
+}
+
+.col ul li:first-child {
+    color: #f1ce0a;
+    font-weight: bold;
+}
+
+/* COMIDA TIENDAS */
+.formulario-container {
+    width: 700px;
+    background-color: #ddd783; /* Color de fondo naranja claro */
+    padding: 20px; /* Relleno 20px por cada lado  */
+    border-radius: 15px; /* Bordes en las esquinas  de 15px */
+    border: solid orange; /* Bordes solido de color naranja */
+    margin-left: auto; /* Alinea desde la izquierda*/
+    margin-right: auto; /* Alinea desde la derecha*/
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-cliente, .datos-mascota {
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.input#nombre {
+    width: 400px;
+} 
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"] {
+    width: 88%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botones button {
+    background-color: #f96c1e; /* Color de fondo naranja oscuro */
+    color: white;
+    border: none;
+    margin-top: 15px;
+    /* padding: 10px 20px; */
+    border-radius: 4px;
+    /* margin-right: 10px; */
+    cursor: pointer;
+}
+
+.botones button:hover {
+    background-color: #e65b1c; /* Color al pasar el cursor */
+}
+
+/* FIN TIENDAS */
+
+/* PLANES */
+.login-container {
+    background-color: #f9f3d2; /* Color de fondo similar al de la imagen */
+    padding: 0px;
+    border-radius: 15px;
+    width: 550px; /* Ajusta el ancho según tus necesidades */
+    margin: auto;
+    border: solid #9b8d3e;
+    list-style: none;
+}
+table {
+    table-layout: fixed;
+    width: 550px; /* Ancho total de la tabla */
+    
+}
+.sec-container {
+    background-color: #f9f3d2; /* Color de fondo similar al de la imagen */
+    border-radius: 15px;
+    width: 550px; /* Ajusta el ancho según tus necesidades */
+    padding: 20px;
+    margin: auto;
+    border: solid #9b8d3e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  section {
+    margin-left: 30px; /* Margen desde la izquierda */
+}
+.acc {
+    text-align: left;
+}
+.servsalud {
+    list-style: none;
+    margin:auto;
+}
+
+.sec-container, .servsalud {
+    text-align: left;
+}
+
+.container { /* pagina de contacto */
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f1ce0a;
+}
+label {
+    font-weight: bold;
+}
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    width: 100px;
+}
+
+input#username, input#password {
+    width: 180px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+  /* SECCION CONTAINER |ul class="plan_perros"|;|p class="titulo"|;| section class="sec-container"|;|ol class="Sev_prev"|*/
+
+.sec-container .titulo {
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sec-container ol {
+    text-align: left;
+}
+
+.login-container .titulo {
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+  }
+
+.login-container ul {
+    list-style: none;
+}
+
+.login-container ol {
+    text-align: left;
+}
+.login-form button {
+    display: block; /* Convierte el botón en un elemento de bloque */
+    margin: 0 auto; /* Centra horizontalmente usando margin */
+    background-color: #8dc63f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #7cb62f; /* Color al pasar el cursor */
+}
+
+
+/* INGRESOS */
+.ingresos {
+    margin-top: 70px;
+}
+
+.login-container {
+    background-color: #f9f3d2; /* Color de fondo similar al de la imagen */
+    padding: 20px; /* Relleno de 20px el los 4 lados top, righr, bottom, left  */
+    border-radius: 15px; /* Borde de las esquinas top, righr, bottom, left */
+    width: 550px; /* Ajusta el ancho según tus necesidades */
+    margin: auto; /* margen automático centrado vertical y horizontalmente */
+    border: solid #9b8d3e; /* borde de 1px solido (linea continua) y de color #9B8D3E */
+}
+
+.horario {
+    list-style: none;
+}
+.tit { /* Estos son parrafos */
+    color: blue; /* color del texto */
+    font-size: 20px; /* Tamaño del texto de estos parrafos */
+}
+.login-form .input-group {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.comida-item:hover { /* tienda */
+    transition: transform 0.3s; /* Transición suave */
+    transform: scale(1.1); /* Escala al 110% al pasar el cursor */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.comida-container { /* tienda */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para cada elemento de comida */
+.comida-item { /* tienda */
+    width: 70%; /* Ajusta el ancho según tus necesidades antes 80%*/
+    /* border: 1px solid #ccc; */ /* Borde opcional */
+    padding: 15px; /* Espacio interno */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos para las imágenes */
+.comida-item img { /* tienda */
+    max-width: 70%; /* Ajusta el tamaño de la imagen al contenedor antes 80%*/
+    height: auto; /* Mantiene la proporción de aspecto */
+}
+
+/* Estilos para las descripciones */
+.comida-item p { /* tienda */
+    font-size: 12px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    margin-left: 100px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* Estilos para tablet (768px) */
+@media (min-width: 768px) {
+    /* Agrega aquí tus estilos específicos para tablet */
+  }
+  
+  /* Estilos para laptop (1440px) */
+  @media (min-width: 1440px) {
+    /* Agrega aquí tus estilos específicos para laptop */
+  }
+  
+  /* Estilos para móvil (425px) */
+  @media (max-width: 425px) {
+    /* Agrega aquí tus estilos específicos para móvil */
+  }
+  
